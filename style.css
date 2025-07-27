@@ -1,0 +1,103 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.switch-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* background-color: aqua; */
+  align-items: center;
+  justify-content: center;
+}
+
+.switch {
+  display: flex;
+  width: 150px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(194, 188, 245);
+  border-radius: 25px;
+  border: 5px rgb(243, 10, 10) solid;
+}
+
+label {
+  cursor: pointer;
+}
+
+.slider {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slider::after {
+  content: "OFF";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: rgb(241, 28, 28);
+  height: 50px;
+  width: 65px;
+  border-radius: 35%;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Jika input dicentang (ON), geser lingkaran */
+input:checked + .slider::after {
+  left: 75px;
+  background-color: rgb(1, 224, 1);
+  content: 'ON';
+}
+
+.light-container {
+  background-color: aqua;
+  width: 100px;
+  height: 200px;
+  display: flex;
+  justify-content:center ;
+  margin-left: 50%;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.light {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.light span {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+#span1.active {
+  background-color: red;
+}
+
+#span2.active {
+  background-color: yellow;
+}
+
+#span3.active {
+  background-color: greenyellow;
+}
+
+
+
